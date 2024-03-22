@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Forms challenge</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <h1>Contact Me</h1>
+    </header>
+    <main>
+      <form action="/challenge" method="GET">
+        <section>
+          <h2>How can we help you?</h2>
+          <ul>
+            <li>
+              <label for="userName">Your Name</label>
+              <input type="text" name="userName" id="userName" required />
+            </li>
+            <li>
+              <label for="userEmail">Your E-Mail Address</label>
+              <input type="email" name="userEmail" id="userEmail" required />
+            </li>
+            <li>
+              <label for="userPhone">Your Phone Number</label>
+              <input
+                type="number"
+                name="userPhone"
+                id="userPhone"
+                required
+                minlength="10"
+                maxlength="10"
+              />
+            </li>
+            <li>
+              <label for="userMessage">Your Message</label>
+              <textarea
+                type="text"
+                name="userMessage"
+                id="userMessage"
+                rows="8"
+                maxlength="200"
+              ></textarea>
+            </li>
+          </ul>
+        </section>
+        <section>
+          <label for="ways">How did you find us?</label>
+          <select name="ways" id="ways">
+            <option value="webSearch">Web Search</option>
+            <option value="worldOfMouth">World Of Mouth</option>
+            <option value="other">Other</option>
+          </select>
+        </section>
+        <section>
+          <h2>How should we reply?</h2>
+          <ul>
+            <li class="form-control-inline">
+              <input
+                type="radio"
+                name="reply"
+                id="replyPhone"
+                value="Phone"
+                required
+              />
+              <label for="replyPhone">Call me</label>
+            </li>
+            <li class="form-control-inline">
+              <input
+                type="radio"
+                name="reply"
+                id="replyEmail"
+                value="Email"
+                required
+              />
+              <label for="replyEmail">Send me an email</label>
+            </li>
+            <li class="form-control-inline">
+              <input
+                type="radio"
+                name="reply"
+                id="noReply"
+                value="none"
+                required
+              />
+              <label for="noReply">Don't reply</label>
+            </li>
+          </ul>
+        </section>
+
+        <section>
+          <div class="form-control-inline">
+            <input type="checkbox" name="terms" id="terms" required />
+            <label for="terms">Accept Terms</label>
+          </div>
+        </section>
+
+        <section id="form-action">
+              <button type="reset" class="clearbtn">Clear</button>
+              <button type="submit" class="submitbtn">Submit</button>
+        </section>
+      </form>
+    </main>
+  </body>
+</html>
